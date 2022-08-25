@@ -10,11 +10,11 @@ public class MyStorePriceTest extends BaseTest {
     MyStorePage myStorePage = new MyStorePage();
 
     @Test
-    @DisplayName("Check all price tags")
+    @DisplayName("Check the number of price tags for Popular Products on Featured Page")
     @Tag("priceTag")
     void findAllPriceSelectors() {
         driver.get(myStorePage.pageAddress);
-        myStorePage.actualNumberOfSelectors = driver.findElements(By.cssSelector(myStorePage.priceLocator));
+        myStorePage.actualNumberOfSelectors = driver.findElements(By.cssSelector(myStorePage.priceLocatorFeatured));
         int expectedNumberOfSelectors = 7;
         assertThat((long) myStorePage.actualNumberOfSelectors.size()).isEqualTo(expectedNumberOfSelectors);
     }
