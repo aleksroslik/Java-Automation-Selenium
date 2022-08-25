@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
 
-    WebDriver driver;
+    public WebDriver driver;
 
     @BeforeAll
     static void setDriver() {
@@ -15,13 +15,13 @@ public class BaseTest {
     }
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
     @AfterEach
-    void close() {
+    public void close() {
         driver.quit();
     }
 }

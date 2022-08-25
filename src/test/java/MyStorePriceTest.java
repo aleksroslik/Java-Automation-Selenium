@@ -12,7 +12,7 @@ public class MyStorePriceTest extends BaseTest {
     @Test
     @DisplayName("Check the number of price tags for Popular Products on Featured Page")
     @Tag("priceTag")
-    void findAllPriceSelectors() {
+    public void findAllPriceSelectors() {
         driver.get(myStorePage.pageAddress);
         myStorePage.actualNumberOfSelectors = driver.findElements(By.cssSelector(myStorePage.priceLocatorFeatured));
         int expectedNumberOfSelectors = 7;
