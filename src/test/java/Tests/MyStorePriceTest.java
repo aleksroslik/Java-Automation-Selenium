@@ -19,6 +19,6 @@ public class MyStorePriceTest extends BaseTest {
         driver.get(myStorePage.pageAddress);
         myStorePage.actualNumberOfSelectors = driver.findElements(By.cssSelector(myStorePage.priceLocatorFeatured));
         int expectedNumberOfSelectors = 7;
-        assertThat((long) myStorePage.actualNumberOfSelectors.size()).isEqualTo(expectedNumberOfSelectors);
+        assertThat(myStorePage.actualNumberOfSelectors.size()).isEqualTo(expectedNumberOfSelectors);
     }
 }
